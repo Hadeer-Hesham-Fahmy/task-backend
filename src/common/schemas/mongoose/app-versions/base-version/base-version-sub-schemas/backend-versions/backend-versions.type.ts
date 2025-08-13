@@ -16,8 +16,6 @@ export class BackEndVersionsSubSchemaType {
   @IsNumberString()
   engagement: string;
 
-
-
   @IsNumberString()
   areas: string;
 

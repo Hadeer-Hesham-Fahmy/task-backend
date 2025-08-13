@@ -28,7 +28,7 @@ export function getTaskPipeline(): PipelineStage[] {
     {
       $unwind: { path: '$issuedBy', preserveNullAndEmptyArrays: true },
     },
-    
+
     {
       $lookup: {
         from: 'users',
@@ -38,7 +38,7 @@ export function getTaskPipeline(): PipelineStage[] {
       },
     },
 
-     // dependencies details
+    // dependencies details
     {
       $lookup: {
         from: 'tasks', // self-collection lookup
@@ -65,12 +65,12 @@ export function getTaskPipeline(): PipelineStage[] {
         },
       },
     },
-   
+
     {
       $project: {
         title: 1,
         description: 1,
-       
+
         dueDate: 1,
         issuedBy: 1,
         'issuedTo._id': 1,
@@ -111,7 +111,7 @@ export function getTasksPipeline(): PipelineStage[] {
     {
       $unwind: { path: '$issuedBy', preserveNullAndEmptyArrays: true },
     },
-    
+
     {
       $lookup: {
         from: 'users',
@@ -120,7 +120,7 @@ export function getTasksPipeline(): PipelineStage[] {
         as: 'issuedTo',
       },
     },
-    
+
     {
       $project: {
         title: 1,

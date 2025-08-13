@@ -82,9 +82,9 @@ export const errorManager = {
 
   INVALID_ASSIGNED_USERS: new CustomError({
     localizedMessage: {
-    en: 'One or more assigned users do not exist.',
-    ar: 'أحد أو أكثر من المستخدمين المعينين غير موجود.',
-  },
+      en: 'One or more assigned users do not exist.',
+      ar: 'أحد أو أكثر من المستخدمين المعينين غير موجود.',
+    },
     errorType: ErrorType.INVALID,
     event: 'INVALID_ASSIGNED_USERS',
     error: [
@@ -94,20 +94,20 @@ export const errorManager = {
     ],
   }),
 
-    DUPLICATE_ASSIGNED_USERS: new CustomError({
+  DUPLICATE_ASSIGNED_USERS: new CustomError({
     localizedMessage: {
-    en: 'Assigned users contain duplicate values.',
-    ar: 'قائمة المستخدمين المعينين تحتوي على قيم مكررة.',
-  },
+      en: 'Assigned users contain duplicate values.',
+      ar: 'قائمة المستخدمين المعينين تحتوي على قيم مكررة.',
+    },
     errorType: ErrorType.WRONG_INPUT,
     event: 'DUPLICATE_ASSIGNED_USERS',
   }),
 
   INVALID_ASSIGNED_TASKS: new CustomError({
     localizedMessage: {
-    en: 'One or more assigned tasks do not exist.',
-    ar: 'أحد أو أكثر من المهام المعينة غير موجود.',
-  },
+      en: 'One or more assigned tasks do not exist.',
+      ar: 'أحد أو أكثر من المهام المعينة غير موجود.',
+    },
     errorType: ErrorType.INVALID,
     event: 'INVALID_ASSIGNED_TASKS',
     error: [
@@ -117,75 +117,72 @@ export const errorManager = {
     ],
   }),
 
- DUPLICATE_ASSIGNED_TASKS: new CustomError({
-  localizedMessage: {
-    en: 'Assigned tasks contain duplicate values.',
-    ar: 'قائمة المهام المعينة تحتوي على قيم مكررة.',
-  },
-  errorType: ErrorType.WRONG_INPUT,
-  event: 'DUPLICATE_ASSIGNED_TASKS',
-}),
+  DUPLICATE_ASSIGNED_TASKS: new CustomError({
+    localizedMessage: {
+      en: 'Assigned tasks contain duplicate values.',
+      ar: 'قائمة المهام المعينة تحتوي على قيم مكررة.',
+    },
+    errorType: ErrorType.WRONG_INPUT,
+    event: 'DUPLICATE_ASSIGNED_TASKS',
+  }),
 
+  UNAUTHORIZED: new CustomError({
+    localizedMessage: {
+      en: 'User is not authorized to perform this action.',
+      ar: 'المستخدم غير مخول لأداء هذا الإجراء.',
+    },
+    errorType: ErrorType.UNAUTHORIZED,
+    event: 'UNAUTHORIZED',
+  }),
 
-UNAUTHORIZED: new CustomError({
-  localizedMessage: {
-    en: 'User is not authorized to perform this action.',
-    ar: 'المستخدم غير مخول لأداء هذا الإجراء.',
-  },
-  errorType: ErrorType.UNAUTHORIZED,
-  event: 'UNAUTHORIZED',
-}),
+  TASK_TITLE_REQUIRED: new CustomError({
+    localizedMessage: {
+      en: 'Task title is required.',
+      ar: 'عنوان المهمة مطلوب.',
+    },
+    errorType: ErrorType.WRONG_INPUT,
+    event: 'TASK_TITLE_REQUIRED',
+  }),
 
-TASK_TITLE_REQUIRED: new CustomError({
-  localizedMessage: {
-    en: 'Task title is required.',
-    ar: 'عنوان المهمة مطلوب.',
-  },
-  errorType: ErrorType.WRONG_INPUT,
-  event: 'TASK_TITLE_REQUIRED',
-}),
+  INVALID_ISSUEDTO_TYPE: new CustomError({
+    localizedMessage: {
+      en: '`issuedTo` must be an array of user IDs.',
+      ar: 'حقل "issuedTo" يجب أن يكون مصفوفة من معرفات المستخدمين.',
+    },
+    errorType: ErrorType.WRONG_INPUT,
+    event: 'INVALID_ISSUEDTO_TYPE',
+  }),
 
-INVALID_ISSUEDTO_TYPE: new CustomError({
-  localizedMessage: {
-    en: '`issuedTo` must be an array of user IDs.',
-    ar: 'حقل "issuedTo" يجب أن يكون مصفوفة من معرفات المستخدمين.',
-  },
-  errorType: ErrorType.WRONG_INPUT,
-  event: 'INVALID_ISSUEDTO_TYPE',
-}),
-
-INVALID_DEPENDENCIES_TYPE: new CustomError({
-  localizedMessage: {
-    en: '`dependencies` must be an array of task IDs.',
-    ar: 'حقل "dependencies" يجب أن يكون مصفوفة من معرفات المهام.',
-  },
-  errorType: ErrorType.WRONG_INPUT,
-  event: 'INVALID_DEPENDENCIES_TYPE',
-}),
-STATUS_UPDATE_NOT_ALLOWED_HERE: new CustomError({
-  localizedMessage: {
-    en: 'Updating task status is not allowed in this method.',
-    ar: 'لا يُسمح بتحديث حالة المهمة في هذه الطريقة.',
-  },
-  errorType: ErrorType.WRONG_INPUT,
-  event: 'STATUS_UPDATE_NOT_ALLOWED_HERE',
-}),
-INVALID_STATUS_TRANSITION: new CustomError({
-  localizedMessage: {
-    en: 'You cannot change the task status from the current state to the requested state.',
-    ar: 'لا يمكنك تغيير حالة المهمة من الحالة الحالية إلى الحالة المطلوبة.',
-  },
-  errorType: ErrorType.WRONG_INPUT,
-  event: 'INVALID_STATUS_TRANSITION',
-}),
-DEPENDENCY_TASKS_NOT_COMPLETED: new CustomError({
-  localizedMessage: {
-    en: 'Cannot complete task. The following dependencies are not completed.',
-    ar: 'لا يمكن إكمال المهمة. التبعيات التالية لم تكتمل بعد.',
-  },
-  errorType: ErrorType.WRONG_INPUT,
-  event: 'DEPENDENCY_TASKS_NOT_COMPLETED',
-}),
-
-
+  INVALID_DEPENDENCIES_TYPE: new CustomError({
+    localizedMessage: {
+      en: '`dependencies` must be an array of task IDs.',
+      ar: 'حقل "dependencies" يجب أن يكون مصفوفة من معرفات المهام.',
+    },
+    errorType: ErrorType.WRONG_INPUT,
+    event: 'INVALID_DEPENDENCIES_TYPE',
+  }),
+  STATUS_UPDATE_NOT_ALLOWED_HERE: new CustomError({
+    localizedMessage: {
+      en: 'Updating task status is not allowed in this method.',
+      ar: 'لا يُسمح بتحديث حالة المهمة في هذه الطريقة.',
+    },
+    errorType: ErrorType.WRONG_INPUT,
+    event: 'STATUS_UPDATE_NOT_ALLOWED_HERE',
+  }),
+  INVALID_STATUS_TRANSITION: new CustomError({
+    localizedMessage: {
+      en: 'You cannot change the task status from the current state to the requested state.',
+      ar: 'لا يمكنك تغيير حالة المهمة من الحالة الحالية إلى الحالة المطلوبة.',
+    },
+    errorType: ErrorType.WRONG_INPUT,
+    event: 'INVALID_STATUS_TRANSITION',
+  }),
+  DEPENDENCY_TASKS_NOT_COMPLETED: new CustomError({
+    localizedMessage: {
+      en: 'Cannot complete task. The following dependencies are not completed.',
+      ar: 'لا يمكن إكمال المهمة. التبعيات التالية لم تكتمل بعد.',
+    },
+    errorType: ErrorType.WRONG_INPUT,
+    event: 'DEPENDENCY_TASKS_NOT_COMPLETED',
+  }),
 };

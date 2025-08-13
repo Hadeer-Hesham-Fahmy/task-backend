@@ -36,22 +36,21 @@ export const configSchema = (appConfig: AppConfigOptions) => {
     FIREBASE_USER_DEFAULT_DEEP_LINK: Joi.string().required(),
 
     // Manager
-MANAGER_EMAIL: Joi.string().required(),
-MANAGER_NAME_EN: Joi.string().required(),
-MANAGER_NAME_AR: Joi.string().required(),
-MANAGER_PASSWORD: Joi.string().required(),
+    MANAGER_EMAIL: Joi.string().required(),
+    MANAGER_NAME_EN: Joi.string().required(),
+    MANAGER_NAME_AR: Joi.string().required(),
+    MANAGER_PASSWORD: Joi.string().required(),
 
-// User
-USER_EMAIL: Joi.string().required(),
-USER_NAME_EN: Joi.string().required(),
-USER_NAME_AR: Joi.string().required(),
-USER_PASSWORD: Joi.string().required(),
+    // User
+    USER_EMAIL: Joi.string().required(),
+    USER_NAME_EN: Joi.string().required(),
+    USER_NAME_AR: Joi.string().required(),
+    USER_PASSWORD: Joi.string().required(),
 
-//SECONDARY User
-SECONDARY_USER_EMAIL: Joi.string().required(),
-SECONDARY_USER_NAME_EN: Joi.string().required(),
-SECONDARY_USER_NAME_AR: Joi.string().required(),
-SECONDARY_USER_PASSWORD: Joi.string().required(),
-
+    //SECONDARY User
+    SECONDARY_USER_EMAIL: Joi.string().required(),
+    SECONDARY_USER_NAME_EN: Joi.string().required(),
+    SECONDARY_USER_NAME_AR: Joi.string().required(),
+    SECONDARY_USER_PASSWORD: Joi.string().required(),
   });
 };

@@ -9,10 +9,7 @@ import { CustomLoggerService } from '@common/modules/common/services/logger';
 
 @Catch()
 export class ExceptionFilter extends BaseExceptionFilter {
-  constructor(
-    private appConfig: AppConfig,
-    private logger: CustomLoggerService,
-  ) {
+  constructor(private appConfig: AppConfig, private logger: CustomLoggerService) {
     super();
   }
 

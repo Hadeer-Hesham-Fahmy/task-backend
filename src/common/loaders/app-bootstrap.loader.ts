@@ -73,13 +73,10 @@ export async function appBootstrapLoader(
     app.use('/api-json', (req, res) => {
       res.send(document);
     });
-  writeFileSync('./swagger.json', JSON.stringify(document, null, 2));
-
+    writeFileSync('./swagger.json', JSON.stringify(document, null, 2));
   }
 
-
   useContainer(app.select(AppModule), { fallbackOnErrors: true });
-
 
   await app.listen(debugOptions?.port ?? 3000);
 

@@ -37,14 +37,12 @@ export const TaskSchema = new Schema<Task, ITaskModel>(
       },
     ],
 
-   
-dependencies: [
+    dependencies: [
       {
         type: Schema.Types.ObjectId,
         ref: ModelNames.TASK,
       },
     ],
- 
 
     status: {
       type: String,
@@ -52,8 +50,6 @@ dependencies: [
       enum: TaskStatusEnum,
       default: TaskStatusEnum.PENDING,
     },
-
- 
 
     ...BaseSchema,
   },

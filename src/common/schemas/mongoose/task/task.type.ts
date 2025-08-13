@@ -25,8 +25,6 @@ export class Task extends BaseModel<Task> {
   @IsNotEmpty()
   description?: string;
 
-  
-
   @IsDate()
   dueDate: Date;
 

@@ -15,8 +15,6 @@ export class AppConfig {
   USER_JWT_EXPIRY: number = this.configService.get('USER_JWT_EXPIRY');
   USER_JWT_REFRESH_EXPIRY: string = this.configService.get('USER_JWT_REFRESH_EXPIRY');
 
-
-
   S2S_JWT_SECRET: string = this.configService.get('S2S_JWT_SECRET');
 
   REDIS_HOST: string = this.configService.get('REDIS_HOST');
@@ -42,8 +40,6 @@ export class AppConfig {
 
   FIREBASE_EMPLOYEE_DEEP_LINKS_DOMAIN: string = this.configService.get('FIREBASE_EMPLOYEE_DEEP_LINKS_DOMAIN');
   FIREBASE_EMPLOYEE_DEFAULT_DEEP_LINK: string = this.configService.get('FIREBASE_EMPLOYEE_DEFAULT_DEEP_LINK');
-
-
 
   FIREBASE_TYPE_USER: string = this.configService.get('FIREBASE_TYPE_USER');
   FIREBASE_PROJECT_ID_USER: string = this.configService.get('FIREBASE_PROJECT_ID_USER');
@@ -73,8 +69,7 @@ export class AppConfig {
   FIREBASE_CLIENT_X509_CERT_URL_EMPLOYEE: string = this.configService.get('FIREBASE_CLIENT_X509_CERT_URL_EMPLOYEE');
   FIREBASE_UNIVERSE_DOMAIN_EMPLOYEE: string = this.configService.get('FIREBASE_UNIVERSE_DOMAIN_EMPLOYEE');
 
-
-// Manager
+  // Manager
   MANAGER_EMAIL: string = this.configService.get<string>('MANAGER_EMAIL');
   MANAGER_NAME_EN: string = this.configService.get<string>('MANAGER_NAME_EN');
   MANAGER_NAME_AR: string = this.configService.get<string>('MANAGER_NAME_AR');
@@ -86,12 +81,12 @@ export class AppConfig {
   USER_NAME_AR: string = this.configService.get<string>('USER_NAME_AR');
   USER_PASSWORD: string = this.configService.get<string>('USER_PASSWORD');
 
-   //SECONDARY User
+  //SECONDARY User
   SECONDARY_USER_EMAIL: string = this.configService.get<string>('SECONDARY_USER_EMAIL');
   SECONDARY_USER_NAME_EN: string = this.configService.get<string>('SECONDARY_USER_NAME_EN');
   SECONDARY_USER_NAME_AR: string = this.configService.get<string>('SECONDARY_USER_NAME_AR');
   SECONDARY_USER_PASSWORD: string = this.configService.get<string>('SECONDARY_USER_PASSWORD');
-  
+
   get UPTIME() {
     return process.uptime();
   }

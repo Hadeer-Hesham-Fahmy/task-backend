@@ -2,10 +2,8 @@ import { TaskStatusEnum } from '@common/schemas/mongoose/task';
 import { IsDateString, IsEnum, IsOptional, IsString } from 'class-validator';
 import { BasePaginationQuery } from 'src/common/dtos/base-pagination.dto';
 
-
-
 export class ListTasksQueryDto extends BasePaginationQuery {
- @IsOptional()
+  @IsOptional()
   @IsEnum(TaskStatusEnum)
   status?: TaskStatusEnum;
 

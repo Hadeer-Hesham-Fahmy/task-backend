@@ -35,8 +35,6 @@ export const UserSchema = new Schema<User, IUserModel, IUserInstanceMethods>(
       required: true,
     },
 
-  
-
     ...BaseSchema,
   },
   {
@@ -57,9 +55,7 @@ export function userSchemaFactory(connection: Connection) {
   UserSchema.index({ 'role._id': 1 });
 
   UserSchema.pre('validate', async function () {
-
     await validateSchema(this, User);
-
   });
 
   UserSchema.pre('save', async function () {

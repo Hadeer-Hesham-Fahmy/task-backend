@@ -86,7 +86,6 @@ export * from '@common/modules/mongoose/user/user.module';
 
 export * from '@common/modules/mongoose/app-versions/index';
 
-
 export * from '@common/modules/mongoose/common/index';
 
 // Exporting pipes
@@ -117,20 +116,14 @@ export * from '@common/schemas/mongoose/app-versions/base-version/base-version.s
 export * from '@common/schemas/mongoose/app-versions/base-version/base-version.type';
 export * from '@common/schemas/mongoose/app-versions/ios-version/index';
 
-
-
 export * from '@common/schemas/mongoose/base/base-schema/base.schema';
 export * from '@common/schemas/mongoose/base/base-schema/base.type';
 export * from '@common/schemas/mongoose/base/base-schema/index';
-
-
 
 export * from '@common/schemas/mongoose/common/dynamic-link/index';
 export * from '@common/schemas/mongoose/common/localized-text/index';
 export * from '@common/schemas/mongoose/common/media/index';
 export * from '@common/schemas/mongoose/common/point/index';
-
-
 
 // Exporting strategies
 export * from '@common/strategies';

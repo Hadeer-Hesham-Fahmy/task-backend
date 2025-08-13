@@ -39,7 +39,7 @@ async function initializeRoleAndUser({
       name: { en: roleNameEn, ar: roleNameAr },
       permissions,
     });
-     logger.log(`✅ ${roleNameEn} Role initialized`);
+    logger.log(`✅ ${roleNameEn} Role initialized`);
   } else {
     logger.warn(`⚠️ ${roleNameEn} Role already exists`);
   }
@@ -54,7 +54,6 @@ async function initializeRoleAndUser({
   // 2️⃣ Ensure User exists
   const existingUser = await userModel.findOne({ email: userEmail });
   if (!existingUser) {
-
     await userModel.create({
       name: { en: userNameEn, ar: userNameAr },
       email: userEmail,
@@ -74,7 +73,7 @@ export async function seedDefaultUsers(
   {
     manager,
     user,
-    secondaryUser
+    secondaryUser,
   }: {
     manager: { email: string; nameEn: string; nameAr: string; password: string };
     user: { email: string; nameEn: string; nameAr: string; password: string };

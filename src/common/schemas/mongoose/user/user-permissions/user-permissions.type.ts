@@ -8,16 +8,11 @@ export class UserPermissionReadUpdateOperation extends PickType(UserPermissionOp
   'read',
   'update',
 ] as const) {}
-export class UserPermissionReadUpdateDeleteOperation extends OmitType(UserPermissionOperations, [
-  'create',
-] as const) {}
-export class UserPermissionCreateReadUpdateOperation extends OmitType(UserPermissionOperations, [
-  'delete',
-] as const) {}
+export class UserPermissionReadUpdateDeleteOperation extends OmitType(UserPermissionOperations, ['create'] as const) {}
+export class UserPermissionCreateReadUpdateOperation extends OmitType(UserPermissionOperations, ['delete'] as const) {}
 
 export class UserPermissions implements Record<UserResourcesEnum, Partial<UserPermissionOperations>> {
   @IsObject()
   @ValidateNested()
   tasks: UserPermissionOperations;
-  
 }

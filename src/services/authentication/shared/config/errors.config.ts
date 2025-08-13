@@ -19,8 +19,6 @@ export const errorManager = {
     errorType: ErrorType.UNAUTHORIZED,
   }),
 
-
-
   EMPLOYEE_NOT_FOUND: new CustomError({
     localizedMessage: {
       en: 'Employee Not Found',

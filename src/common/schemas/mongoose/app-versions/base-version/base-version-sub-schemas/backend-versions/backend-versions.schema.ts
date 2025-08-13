@@ -33,7 +33,6 @@ export const BackEndVersionsSubSchema = new Schema<BackEndVersionsSubSchemaType>
       required: true,
     },
 
-
     areas: {
       type: String,
       default: '1',

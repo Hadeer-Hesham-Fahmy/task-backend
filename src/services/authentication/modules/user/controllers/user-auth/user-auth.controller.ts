@@ -1,12 +1,6 @@
 import { Body, Controller, Post, Req, UseGuards, VERSION_NEUTRAL } from '@nestjs/common';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
-import {
-  CustomResponse,
-  IUserInstanceMethods,
-  Persona,
-  User,
-  IsPrivateAuthOrPublic,
-} from '@common';
+import { CustomResponse, IUserInstanceMethods, Persona, User, IsPrivateAuthOrPublic } from '@common';
 import { Request } from 'express';
 import { HydratedDocument } from 'mongoose';
 import { ForgetPasswordDto } from './dto/forget-password.dto';

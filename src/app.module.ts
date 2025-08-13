@@ -4,7 +4,6 @@ import { UsersServiceModule, AuthenticationServiceModule } from './services';
 import { TasksServiceModule } from './services/tasks/tasks-service.module';
 @Module({
   imports: [
-
     TasksServiceModule,
     AuthenticationServiceModule,
     UsersServiceModule,
@@ -24,9 +23,6 @@ import { TasksServiceModule } from './services/tasks/tasks-service.module';
         default: [],
       },
     }),
-
-  
-
   ],
   controllers: [],
   providers: [],

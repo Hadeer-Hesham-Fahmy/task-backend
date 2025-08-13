@@ -31,8 +31,6 @@ export class LoginEmailStrategy extends PassportStrategy(Strategy, 'user-login-e
       );
     }
 
-
-
     return user;
   }
 }

@@ -5,27 +5,21 @@ import { IsArray, IsEnum, IsInstance, IsOptional, IsString } from 'class-validat
 import { Types } from 'mongoose';
 
 export class UpdateTaskDto extends PartialType(
-  PickType(Task, ['title', 'dueDate', 'issuedTo', 'description',
-  'dependencies'
-  ] as const),
+  PickType(Task, ['title', 'dueDate', 'issuedTo', 'description', 'dependencies'] as const),
 ) {
-
-
   @ApiPropertyOptional({
     example: ['689cf17b63e1c01b9f13d815'],
   })
-       @IsOptional()
-
+  @IsOptional()
   @IsArray()
   @IsInstance(Types.ObjectId, { each: true })
   @TransformObjectIds()
   issuedTo?: Types.ObjectId[];
 
-  
- @ApiPropertyOptional({
+  @ApiPropertyOptional({
     example: ['689cf98b53475ab90646d01a'],
   })
-       @IsOptional()
+  @IsOptional()
   @IsArray()
   @IsInstance(Types.ObjectId, { each: true })
   @TransformObjectIds()

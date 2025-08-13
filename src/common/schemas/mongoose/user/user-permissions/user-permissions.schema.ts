@@ -29,8 +29,6 @@ export const UserPermissionSchema = new Schema<UserPermissions>(
         [UserResourceOperationsEnum.FILTER]: false,
       },
     },
-
-    
   },
   { _id: false },
 );

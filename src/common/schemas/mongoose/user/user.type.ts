@@ -42,8 +42,6 @@ export class User extends BaseModel<User> {
   @IsObject()
   @ValidateNested()
   role: UserRoleSubSchemaType;
-
-
 }
 
 export interface IUserInstanceMethods extends IBaseInstanceMethods {

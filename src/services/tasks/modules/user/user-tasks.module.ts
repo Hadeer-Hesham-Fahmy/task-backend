@@ -5,7 +5,6 @@ import { UserTasksController } from './controllers/task.controller';
 import { UserTasksService } from './controllers/task.service';
 import { TaskMongooseModule } from '@common/modules/mongoose/task';
 
-
 @Module({
   imports: [
     TaskMongooseModule,
@@ -28,7 +27,6 @@ import { TaskMongooseModule } from '@common/modules/mongoose/task';
       }),
       inject: [AppConfig],
     }),
-    
   ],
   controllers: [UserTasksController],
   providers: [UserTasksService],

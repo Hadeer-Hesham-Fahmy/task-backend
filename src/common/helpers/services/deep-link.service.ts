@@ -64,8 +64,6 @@ export class DeepLinkService {
     );
   }
 
-
-
   private generateDeepLink(
     options: IUserDeepLinkOptions | IEmployeeDeepLinkOptions | IUserDeepLinkOptions,
     role: string,

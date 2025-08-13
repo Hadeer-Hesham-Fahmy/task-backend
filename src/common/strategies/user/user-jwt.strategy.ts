@@ -28,7 +28,6 @@ export class UserJWTStrategy extends PassportStrategy(Strategy, 'user-jwt') {
       this.userModel.findById(payload._id).lean(),
     ]);
 
-
     if (!sessions?.length || !sessions?.includes(payload.sessionId) || !user) {
       throw new UnauthorizedException(
         new CustomError({

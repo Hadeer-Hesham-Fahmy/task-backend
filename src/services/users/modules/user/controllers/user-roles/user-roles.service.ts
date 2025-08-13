@@ -1,26 +1,30 @@
 import { ConflictException, Inject, Injectable, NotFoundException } from '@nestjs/common';
-import { UserRole, BasePaginationQuery, IUserModel, IUserRoleModel, ModelNames, ResponsePayload, AppConfig } from '@common';
+import {
+  UserRole,
+  BasePaginationQuery,
+  IUserModel,
+  IUserRoleModel,
+  ModelNames,
+  ResponsePayload,
+  AppConfig,
+} from '@common';
 import { errorManager, RoleIdParamDto } from '../../../../shared';
 import { CreateRoleDto } from './dto/create-role.dto';
 import { UpdateRoleBodyDto } from './dto/update-role.dto';
 import { ListAllRolesForList } from './dto/list-all-roles.dto';
 import { escapeRegExp } from 'lodash';
-import {
-  seedDefaultUsers
-
-} from 'src/common/helpers/on-module-initialize.helper';
+import { seedDefaultUsers } from 'src/common/helpers/on-module-initialize.helper';
 
 @Injectable()
 export class UserRolesService {
   constructor(
     @Inject(ModelNames.USER) private userModel: IUserModel,
     @Inject(ModelNames.USER_ROLE) private userRoleModel: IUserRoleModel,
-        private appConfig: AppConfig,
-    
+    private appConfig: AppConfig,
   ) {}
 
   async onModuleInit() {
- await seedDefaultUsers(this.userModel, this.userRoleModel, {
+    await seedDefaultUsers(this.userModel, this.userRoleModel, {
       manager: {
         email: this.appConfig.MANAGER_EMAIL,
         nameEn: this.appConfig.MANAGER_NAME_EN,
@@ -33,7 +37,7 @@ export class UserRolesService {
         nameAr: this.appConfig.USER_NAME_AR,
         password: this.appConfig.USER_PASSWORD,
       },
-       secondaryUser: {
+      secondaryUser: {
         email: this.appConfig.SECONDARY_USER_EMAIL,
         nameEn: this.appConfig.SECONDARY_USER_NAME_EN,
         nameAr: this.appConfig.SECONDARY_USER_NAME_AR,

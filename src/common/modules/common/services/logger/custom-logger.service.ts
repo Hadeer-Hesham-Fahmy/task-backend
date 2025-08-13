@@ -173,8 +173,6 @@ export class CustomLoggerService extends ConsoleLogger {
     return !!(persona?.type === PersonaTypeEnum.USER);
   }
 
-
-
   private decolorize(message: string) {
     return message.replace(
       new RegExp(

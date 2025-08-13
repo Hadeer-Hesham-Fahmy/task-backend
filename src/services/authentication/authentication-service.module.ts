@@ -9,10 +9,8 @@ import { UserAuthenticationModule } from './modules';
     // Register all the authentication Sub-modules
     UserAuthenticationModule,
 
-
     // Route all the authentication Sub-modules
     RouterModule.register([{ path: 'authentication/user', module: UserAuthenticationModule }]),
-
 
     // General Module Imports
     AwsSESModule.registerAsync({

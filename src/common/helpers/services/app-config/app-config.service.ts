@@ -30,8 +30,6 @@ export class AppConfig {
   EMPLOYEE_JWT_EXPIRY: string = this.configService.get('EMPLOYEE_JWT_EXPIRY');
   EMPLOYEE_JWT_REFRESH_EXPIRY: string = this.configService.get('EMPLOYEE_JWT_REFRESH_EXPIRY');
 
-
-
   AWS_SES_ACCESS_KEY_ID: string = this.configService.get('AWS_SES_ACCESS_KEY_ID');
   AWS_SES_SECRET_ACCESS_KEY: string = this.configService.get('AWS_SES_SECRET_ACCESS_KEY');
   AWS_SES_REGION: string = this.configService.get('AWS_SES_REGION');
@@ -54,8 +52,6 @@ export class AppConfig {
 
   FIREBASE_EMPLOYEE_DEEP_LINKS_DOMAIN: string = this.configService.get('FIREBASE_EMPLOYEE_DEEP_LINKS_DOMAIN');
   FIREBASE_EMPLOYEE_DEFAULT_DEEP_LINK: string = this.configService.get('FIREBASE_EMPLOYEE_DEFAULT_DEEP_LINK');
-
-
 
   FIREBASE_TYPE_USER: string = this.configService.get('FIREBASE_TYPE_USER');
   FIREBASE_PROJECT_ID_USER: string = this.configService.get('FIREBASE_PROJECT_ID_USER');
@@ -84,8 +80,6 @@ export class AppConfig {
   );
   FIREBASE_CLIENT_X509_CERT_URL_EMPLOYEE: string = this.configService.get('FIREBASE_CLIENT_X509_CERT_URL_EMPLOYEE');
   FIREBASE_UNIVERSE_DOMAIN_EMPLOYEE: string = this.configService.get('FIREBASE_UNIVERSE_DOMAIN_EMPLOYEE');
-
-
 
   CLIENT_URL: string = this.configService.get('CLIENT_URL');
 

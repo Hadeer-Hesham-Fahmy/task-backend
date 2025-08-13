@@ -9,10 +9,10 @@ export class CreateTaskDto extends PickType(Task, [
   'dueDate',
   'issuedTo',
   'description',
-  'dependencies'
+  'dependencies',
 ] as const) {
   @ApiProperty({
-     example: ['689cf17b63e1c01b9f13d815'],
+    example: ['689cf17b63e1c01b9f13d815'],
   })
   @IsArray()
   @IsInstance(Types.ObjectId, { each: true })
@@ -20,12 +20,11 @@ export class CreateTaskDto extends PickType(Task, [
   issuedTo: Types.ObjectId[];
 
   @ApiPropertyOptional({
- example: ['689cf98b53475ab90646d01a'],
+    example: ['689cf98b53475ab90646d01a'],
   })
-     @IsOptional()
+  @IsOptional()
   @IsArray()
   @IsInstance(Types.ObjectId, { each: true })
   @TransformObjectIds()
   dependencies?: Types.ObjectId[];
-
 }
